@@ -1,0 +1,68 @@
+<!--// CSS -->
+
+<load target="./css/style.css" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {font-family: "Lato", sans-serif}
+.mySlides {display: none}
+</style>
+
+
+<body>
+
+	<!-- Navbar -->
+
+	<div class="w3-top w3-black">
+		<div class="w3-bar w3-card" style="max-width:<!--@if($layout_info->max_width)-->{$layout_info->max_width}<!--@else-->1200<!--@end-->px;margin:auto;">
+			<a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+			<a href="<!--@if($layout_info->logo_url)-->{$layout_info->logo_url}<!--@else-->{getUrl('')}<!--@end-->" class="w3-bar-item w3-button w3-padding-large"><!--@if($layout_info->logo_text)-->{$layout_info->logo_text}<!--@else-->Band<!--@end--></a>
+			<ul style="list-style:none; margin:0;">
+				<li loop="$GNB->list => $key1, $val1">
+					<a class="w3-bar-item w3-button w3-padding-large w3-hide-small" href="{$val1['href']}" target="_blank"|cond="$val1['open_window'] == 'Y'">{$val1['link']}</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<!-- for small screens -->
+	<div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+		<ul style="list-style:none; margin:0;">
+			<li loop="$GNB->list => $key1, $val1">
+				<a class="w3-bar-item w3-button w3-padding-large" href="{$val1['href']}" target="_blank"|cond="$val1['open_window'] == 'Y'">{$val1['link']}</a>
+			</li>
+		</ul>
+	</div>
+
+	<!-- /Navbar -->
+
+	<!-- Content -->
+	<div class="w3-content" style="max-width:<!--@if($layout_info->max_width)-->{$layout_info->max_width}<!--@else-->1200<!--@end-->px;margin-top:46px">
+		{$content|noescape}
+	</div>
+
+	<!-- /Content -->
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
+	<i class="fa fa-facebook-official w3-hover-opacity"></i>
+	<i class="fa fa-instagram w3-hover-opacity"></i>
+	<i class="fa fa-snapchat w3-hover-opacity"></i>
+	<i class="fa fa-pinterest-p w3-hover-opacity"></i>
+	<i class="fa fa-twitter w3-hover-opacity"></i>
+	<i class="fa fa-linkedin w3-hover-opacity"></i>
+	<p class="w3-medium">Made by  <a href="https://github.com/4ramin" target="_blank">도토리묵</a>, <a href="https://ghkim.net" target="_blank">김근홍</a></p>
+</footer>
+<!-- /Footer -->
+
+<script>
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+</script>

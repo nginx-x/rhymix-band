@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout version="0.2">
+	<title xml:lang="ko">Band</title>
+	<description xml:lang="ko">Band 레이아웃</description>
+	<version>0.1.0</version>
+	<date>2023-01-01</date>
+	<author link="https://github.com/4ramin">
+		<name xml:lang="ko">도토리묵</name>
+	</author>
+	<author email_address="geunhong.kim@ghkim.net" link="https://ghkim.net">
+		<name xml:lang="ko">김근홍</name>
+		<name xml:lang="en">GeunHong Kim</name>
+	</author>
+	<menus>
+		<menu name="GNB" maxdepth="3" default="true">
+			<title xml:lang="ko">메인 메뉴</title>
+		</menu>
+	</menus>
+	<extra_vars>
+		<group>
+			<title xml:lang="ko">기본</title>
+			<var name="logo_text" type="text">
+				<title xml:lang="ko">사이트 제목</title>
+			</var>
+			<var name="logo_url" type="text">
+				<title xml:lang="ko">사이트 제목 링크 (선택)</title>
+			</var>
+			<var name="max_width" type="text">
+				<title xml:lang="ko">고정폭 너비</title>
+				<description xml:lang="ko">사이트의 최대 너비를 정합니다. 기본값은 1200px입니다.</description>
+			</var>
+		</group>
+	</extra_vars>
+</layout>
