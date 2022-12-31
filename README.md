@@ -1,6 +1,6 @@
 # rhymix_layout_band
 
-이 자료는 Rhymix의 레이아웃 입니다. 수정 전 원본은 [여기](https://xetown.com/download/1150710)입니다.
+이 자료는 Rhymix에 사용할 수 있는 레이아웃 입니다. 수정 전 원본은 [여기](https://xetown.com/download/1150710)입니다.
 
 최신 버전 기준으로, 아래 환경에서 작동을 확인했습니다.
 
